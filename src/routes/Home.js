@@ -1,7 +1,12 @@
 import React from 'react'
+import CoinSearch from '../components/CoinSearch'
+import Trending from '../components/Trending'
 
-export const Home = () => {
+export const Home = ({coins}) => {
   return (
-    <div>Home</div>
+    <div>
+      <CoinSearch coins={coins} />
+      <Trending />
+    </div>
   )
 }
