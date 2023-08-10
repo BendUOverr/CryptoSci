@@ -6,6 +6,7 @@ import DOMPurify from 'dompurify'
 import { useParams } from 'react-router-dom';
 
 
+
 export const CoinPage = () => {
   const [coin, setCoin] = useState({});
   const params = useParams()
