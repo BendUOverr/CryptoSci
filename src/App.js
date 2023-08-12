@@ -3,12 +3,12 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./routes/Home";
-import { Signin } from "./routes/Signin";
-import { Signup } from "./routes/Signup";
+import Signup from "./routes/Signup";
 import { Account } from "./routes/Account";
 import { CoinPage } from "./routes/CoinPage";
 import axios from 'axios'
 import Footer from "./components/Footer";
+import Signin from "./routes/Signin";
 
 function App() {
   const [coins, setCoins] = useState([])
@@ -24,7 +24,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element={<Home coins={coins} />} />
-      <Route path='/signin' element={<Signin/>} />
+      <Route path='/signin' element={<Signin />} />
       <Route path='/signup' element={<Signup/>} />
       <Route path='/account' element={<Account />} />
       <Route path='/coin/:coinId' element={<CoinPage />}>
